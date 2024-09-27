@@ -1,25 +1,17 @@
 #include<stdio.h>
 int main() {
-	int units;
-	float totalbill, surcharge;
-	
-	printf("Enter the electricity units\n");
-	scanf("%d", &units);
-	if(units<=30 && units>=0) {
-		totalbill = units * 0.60;
+	int a,b,c;
+	printf("Enter the first angle\n");
+	scanf("%d", &a);
+	printf("Enter the second angle\n");
+	scanf("%d", &b);
+	printf("Enter the third angle\n");
+	scanf("%d", &c);
+	if(a<=0 || b<=0 || c<=0) {
+		printf("Invalid Input\n");
 	}
-	else if(units>=110) {
-		totalbill = (30 * 0.60) + ((units-30) * 0.85);
+	else if(a+b+c==180) {
+		printf("The triangle is valid\n");
 	}
-	else if(units>=210) {
-		totalbill = (30 * 0.60) + (80 * 0.85) + ((units-110) * 1.30);
-	}
-	else {
-		totalbill = (30 * 0.60) + (80 * 0.85) + (100 * 1.30) + ((units-210) * 1.60);
-	}
-	surcharge = units * 0.15;
-	totalbill += surcharge;
-	printf("your total bill including surcharge is %2f\n", totalbill);
-	
 	return 0;
 }

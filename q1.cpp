@@ -1,26 +1,23 @@
-#include<stdio.h> 
+#include<stdio.h>
 int main() {
-	int marks;
-	printf("Enter your marks\n"); 
-	scanf("%d", &marks); 
-	if(marks<0 || marks>100) {
-	printf("Wrong Entry");
-    }
-    else if(marks>=90 && marks<=100) {
-	printf("A");
+	int a;
+	printf("Enter your Age\n");
+	scanf("%d", &a);
+	if (a==18 || a>18) {
+	int citizen;
+	printf("Are you a Pakistani Citizen?\n");
+	printf("Press 1 for yes\n");
+	printf("Press 0 for no\n");
+	scanf("%d", &citizen);
+		if (citizen==1) {
+			printf("You are eligible to vote\n");
+		}
+		else {
+			printf("You are not eligible to vote\n");
+		}
 	}
-	else if(marks>=80 && marks<=89) {
-	printf("B");
+	else {
+		printf("You are not eligible to vote");
 	}
-	else if(marks>=70 && marks<=79) {
-	printf("C");
-	}
-	else if(marks>=60 && marks<=69) {
-	printf("D");
-	}
-	else{
-	printf("F");
-	}
-
+	return 0;
 }
-
